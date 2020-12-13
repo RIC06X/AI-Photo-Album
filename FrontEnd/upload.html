@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI Photo Album</title>
+        <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+        <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+        <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+        <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+        <script type="text/javascript" src="apigClient.js"></script>
+    </head>
+    <body>
+        
+        <p>Image Preview</p>
+        <div id="test-image-preview" style="border: 1px solid #ccc; width: 100%; height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center center;"></div>
+        <p></p>
+        <p>
+            <input type='file' id = "test-image-file"/>
+        </p>
+        <p id= "test-file-info"></p>
+        <script src="upload.js"></script>
+    </body>
+</html>

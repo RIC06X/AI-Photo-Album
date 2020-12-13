@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>AI Photo Album</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ML PhotoAlbum</title>
         <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
         <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
         <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
@@ -13,16 +15,71 @@
         <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
         <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
         <script type="text/javascript" src="apigClient.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <style type="text/css">
+            .footer {
+                position: fixed;
+                text-align: center;
+                bottom: 0px;
+                width: 100%;
+            }
+        </style>
     </head>
+    
     <body>
-        
-        <p>Image Preview</p>
-        <div id="test-image-preview" style="border: 1px solid #ccc; width: 100%; height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center center;"></div>
-        <p></p>
-        <p>
-            <input type='file' id = "test-image-file"/>
-        </p>
-        <p id= "test-file-info"></p>
-        <script src="index.js"></script>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">ML PhotoAlbum</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="upload.html">Upload new Image</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <header class="jumbotron">
+                <div class="container">
+                    <h1>Welcome to ML PhotoAlbum</h1>
+                    <p>Search and view your favorite photos</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" id = "start-button">
+                                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="btn btn-default" type="button" id = "stop-button">
+                                        <i class="fa fa-stop-circle"></i>
+                                    </button>
+                                </span>
+                                <!-- <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="1"></textarea> -->
+                                <input type="text" class="form-control" placeholder="Press Mic to speak or Type " id = "search_input">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" id = "search_btn">Go!</button>
+                                </span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" id = "reset-button">Reset</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    
+            <div class="row text-center" style="display: flex; flex-wrap: wrap;" id="image_grp">
+            </div>
+        </div>
+    
+        <div class="footer">
+            <p>Team ML-PhotoAlbum 2020</p>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="dist/main.js"></script>
+        <script type="text/javascript" src="search.js"></script>
     </body>
 </html>
