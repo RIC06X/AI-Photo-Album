@@ -24,7 +24,7 @@ def lambda_handler(event, context):
     print(reko_lables)
 
     #Elastic Search index data
-    host = "vpc-photo-album-es-6tsvd6fttfhzjkrmo4hpfonwei.us-east-1.es.amazonaws.com"
+    host = "vpc-photo-album2-ogr723pv6jjtfcmhrje5dnzfxe.us-east-1.es.amazonaws.com"
     path = "photos"
     region = "us-east-1"
 

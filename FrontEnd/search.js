@@ -51,14 +51,22 @@ function searchPhotos() {
         // var src = "https://miro.medium.com/fit/c/262/262/0*HkdY2U3dzajq4z9d.jpg";
         // var div = createImagediv(src);
         // images_div.appendChild(div);
-        console.log(result);
+        // console.log(result);
+        var resultList = result["data"];
+        var i;
+        for(i = 0; i < resultList.length; i ++) {
+            var tmpsrc = 'https://s3.amazonaws.com/photo-album-hw3/' + resultList[i];
+            var div = createImagediv(tmpsrc);
+            images_div.appendChild(div);
+        }
+        
     }).catch(function(result){
         console.log("Search failed");
     });
     //TODO delete the following 3 line
 
-    var src = "https://miro.medium.com/fit/c/262/262/0*HkdY2U3dzajq4z9d.jpg";
-    var div = createImagediv(src);
-    images_div.appendChild(div);
+    // var src = "https://miro.medium.com/fit/c/262/262/0*HkdY2U3dzajq4z9d.jpg";
+    // var div = createImagediv(src);
+    // images_div.appendChild(div);
 
 }
